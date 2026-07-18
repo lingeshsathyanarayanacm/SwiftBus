@@ -70,9 +70,10 @@ const About = () => {
             <Avatar
               src={teamMembers[0].image}
               alt="Lingeshsathyanarayana CM"
+              imgProps={{ style: { objectFit: 'cover', objectPosition: 'center top' } }}
               sx={{
-                width: '160px',
-                height: '160px',
+                width: '180px',
+                height: '180px',
                 margin: '0 auto',
                 boxShadow: '0 12px 30px rgba(99, 102, 241, 0.4)',
                 border: '4px solid #6366f1',
@@ -138,7 +139,8 @@ const About = () => {
                 <Avatar
                   src={member.image}
                   alt={member.name}
-                  sx={{ width: '90px', height: '90px', margin: '0 auto 16px auto', boxShadow: '0 4px 14px rgba(0,0,0,0.15)' }}
+                  imgProps={{ style: { objectFit: 'cover', objectPosition: 'center top' } }}
+                  sx={{ width: '100px', height: '100px', margin: '0 auto 16px auto', boxShadow: '0 4px 14px rgba(0,0,0,0.15)', border: idx === 0 ? '3px solid #6366f1' : 'none' }}
                 />
                 <CardContent sx={{ p: 0 }}>
                   <Typography variant="h6" fontWeight="700">
