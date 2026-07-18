@@ -1,0 +1,12 @@
+# Dependencies
+node_modules
+
+# Production build folder
+build
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

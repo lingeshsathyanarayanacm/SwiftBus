@@ -1,4 +1,4 @@
-import { initializeApp } from 'firebase/app';
+import { initializeApp, getApps, getApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider, FacebookAuthProvider, signInWithPopup } from 'firebase/auth';
 
 const firebaseConfig = {
@@ -10,7 +10,9 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_FIREBASE_APP_ID || "1:1234567890:web:swiftbuskey"
 };
 
-const app = initializeApp(firebaseConfig);
+// Safe single-instance initialization
+const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
+
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
 export const facebookProvider = new FacebookAuthProvider();
@@ -25,7 +27,7 @@ export const signInWithGoogle = async () => {
     };
   } catch (error) {
     console.warn("Firebase Auth fallback triggered:", error.message);
-    // Graceful fallback for demo sandbox environment or blocked popups
+    // Graceful fallback for sandbox/unconfigured Vercel environment or blocked popups
     return {
       username: "Google User",
       email: "google.user@example.com",
@@ -51,3 +53,5 @@ export const signInWithFacebook = async () => {
     };
   }
 };
+
+export default app;
