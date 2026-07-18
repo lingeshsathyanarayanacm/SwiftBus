@@ -2,13 +2,14 @@ import React from 'react';
 import { Container, Grid, Typography, Card, CardContent, Avatar, Box, Chip, Paper } from '@mui/material';
 import { FaCode, FaRocket, FaHeart, FaAward, FaBus } from 'react-icons/fa';
 import { useBooking } from './context/BookingContext';
+import developerImg from './images/developer.png';
 
 const teamMembers = [
   {
     name: 'Lingeshsathyanarayana CM',
     role: 'Founder & Chief Architect',
     email: 'lingeshsathyanarayana.cm@swiftbus.com',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80',
+    image: developerImg,
     bio: 'Visionary engineer & full-stack architect leading the mission to revolutionize inter-city bus travel across India with state-of-the-art Web and React technologies.',
     featured: true,
   },
