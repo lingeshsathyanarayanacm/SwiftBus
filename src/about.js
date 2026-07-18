@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Grid, Typography, Card, CardContent, Avatar, Box, Chip, Paper } from '@mui/material';
-import { FaCode, FaRocket, FaHeart, FaAward, FaBus } from 'react-icons/fa';
+import { FaCode, FaRocket, FaAward, FaBus } from 'react-icons/fa';
 import { useBooking } from './context/BookingContext';
 import developerImg from './images/developer.png';
 

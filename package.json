@@ -40,7 +40,7 @@
   "scripts": {
     "start": "react-scripts start",
     "json-server": "json-server --watch db.json --port 3001",
-    "build": "GENERATE_SOURCEMAP=false CI=false react-scripts build",
+    "build": "cross-env GENERATE_SOURCEMAP=false CI=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -63,7 +63,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "cross-env": "^10.1.0"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "PaymentComponent.js",
